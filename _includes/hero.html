@@ -1,0 +1,9 @@
+<section class="hero {% if page.hero_position == 'bottom' %}hero-bottom{% else %}hero-top{% endif %}">
+  <div class="hero-text">
+    <h1>{{ page.hero_title }}</h1>
+    <p>{{ page.hero_subtitle }}</p>
+  </div>
+  <div class="hero-image">
+    <img src="{{ page.hero_image | relative_url }}" alt="Profile Picture">
+  </div>
+</section>
