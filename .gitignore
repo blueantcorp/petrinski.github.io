@@ -1,0 +1,137 @@
+# ========================
+# macOS System Files
+# ========================
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+__MACOSX/
+
+# ========================
+# Xcode / iOS Development
+# ========================
+build/
+DerivedData/
+*.xcuserstate
+*.xcworkspace/xcuserdata/
+*.xcuserdatad/
+*.xcscmblueprint
+*.xcodeproj/project.xcworkspace/
+*.xcodeproj/xcuserdata/
+*.moved-aside
+*.ipa
+*.dSYM.zip
+*.dSYM
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/
+fastlane/test_output/
+
+# Swift Package Manager
+.build/
+Packages/
+Package.pins
+Package.resolved
+
+# CocoaPods
+Pods/
+Podfile.lock
+
+# Carthage
+Carthage/Build/
+
+# ========================
+# Python Development
+# ========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+.eggs/
+.env
+.venv/
+env/
+venv/
+pip-wheel-metadata/
+.pytest_cache/
+.tox/
+.mypy_cache/
+.pyre/
+.coverage
+htmlcov/
+
+# ========================
+# Node.js / JavaScript
+# ========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+dist/
+coverage/
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ========================
+# JetBrains IDEs
+# ========================
+.idea/
+*.iml
+out/
+
+# ========================
+# Visual Studio Code
+# ========================
+.vscode/
+.history/
+*.code-workspace
+
+# ========================
+# Logs, Temp & Misc
+# ========================
+*.log
+*.tmp
+*.swp
+*.swo
+*.bak
+*.orig
+*.rej
+*.out
+*.pid
+*.seed
+*.pid.lock
+tmp/
+temp/
+.cache/
+logs/
+
+# ========================
+# Compiled / Binary Files
+# ========================
+*.o
+*.a
+*.so
+*.exe
+*.dll
+*.class
+*.jar
+*.war
+*.min.js
+*.min.css
+
+# ========================
+# Custom Project Artifacts
+# ========================
+# Add below any build outputs or local-only folders unique to your setup
+# e.g. for Antioch or BlueAnt projects
+/local_config/
+config_local.yaml
+runtime/
+uploads/
+assets/cache/
