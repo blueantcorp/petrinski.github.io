@@ -135,3 +135,11 @@ config_local.yaml
 runtime/
 uploads/
 assets/cache/
+
+# ========================
+# Jekyll / Build Files
+# ========================
+_site/
+.jekyll-cache/
+.jekyll-metadata/
+.sass-cache/

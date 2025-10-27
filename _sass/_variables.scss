@@ -1,0 +1,59 @@
+/* ============================================
+   Full Apple Health-inspired colour palette
+   Dark/Light theme system preference
+============================================ */
+
+/* --- Light Theme --- */
+:root {
+  /* Backgrounds */
+  --bg-primary: #ffffff;         // main background
+  --bg-card: #f2f2f7;            // floating card
+  --bg-section: #fafafa;         // sections
+  --bg-footer: #f4f4f6;          // footer
+
+  /* Text */
+  --text-primary: #1c1c1e;       // main headings & text
+  --text-secondary: #3c3c4399;   // secondary / subtle
+  --text-muted: #8e8e93;         // labels, captions
+
+  /* Lines / SVG */
+  --line-color: #d9d9d9;         // diagonal lines
+  --line-hover: #c7c7cc;         // hover effect
+
+  /* Accents */
+  --accent-green: #34c759;
+  --accent-red: #ff3b30;
+  --accent-orange: #ff9500;
+  --accent-blue: #007aff;
+  --accent-purple: #af52de;
+
+  /* UI / highlights */
+  --highlight: #ffcc00;
+  --shadow-light: rgba(0,0,0,0.08);
+}
+
+/* --- Dark Theme --- */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-primary: #1c1c1e;
+    --bg-card: #2c2c2e;
+    --bg-section: #252528;
+    --bg-footer: #2a2a2c;
+
+    --text-primary: #ffffff;
+    --text-secondary: #ebebf599;
+    --text-muted: #8e8e93;
+
+    --line-color: #3a3a3c;
+    --line-hover: #505054;
+
+    --accent-green: #30d158;
+    --accent-red: #ff453a;
+    --accent-orange: #ff9f0a;
+    --accent-blue: #0a84ff;
+    --accent-purple: #bf5af2;
+
+    --highlight: #ffd60a;
+    --shadow-light: rgba(0,0,0,0.3);
+  }
+}

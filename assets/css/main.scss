@@ -1,0 +1,12 @@
+---
+# main.scss
+---
+
+@use "variables" as *;
+@use "base" as *;
+@use "profile" as *;
+@use "animations" as *;
+@use "diagonal-bg" as *;
+@use 'header' as *; 
+
+/* Additional overrides if needed */

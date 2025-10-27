@@ -1,0 +1,56 @@
+// _sass/_diagonal-bg.scss
+// ----------------------------------------
+// Background: tiny SVG diagonal lines with subtle movement
+// Safari-compatible, system light/dark theme aware
+// Lightweight and visually subtle
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.15;
+
+  // Light mode lines (Apple Health inspired)
+  background-image: url(
+    "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cline x1='0' y1='60' x2='60' y2='0' stroke='%2366666a' stroke-width='0.3'/%3E%3C/svg%3E"
+  );
+  background-repeat: repeat;
+  background-size: 60px 60px;
+
+  // Use transform animation for Safari
+  animation: diagonal-move-safari 60s linear infinite;
+}
+
+@media (prefers-color-scheme: dark) {
+  body::before {
+    background-image: url(
+      "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cline x1='0' y1='60' x2='60' y2='0' stroke='%23a0a0a8' stroke-width='0.3'/%3E%3C/svg%3E"
+    );
+    opacity: 0.1;
+  }
+}
+
+// Standard diagonal movement (for most browsers)
+@keyframes diagonal-move {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 60px 60px;
+  }
+}
+
+// Safari-safe alternative using transform
+@keyframes diagonal-move-safari {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(60px, 60px);
+  }
+}

@@ -2,13 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>{{ page.title }} | {{ site.title }}</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 </head>
-<body>
+<body class="theme-system">
+
   {% include header.html %}
-  {{ content }}
+
+  <main class="main-content">
+    {% include profile.html %}
+    
+    <section class="content-wrapper">
+      {{ content }}
+    </section>
+  </main>
+
   {% include footer.html %}
+
 </body>
 </html>

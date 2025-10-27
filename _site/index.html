@@ -2,48 +2,57 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Home | Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/assets/css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emile Petrinski</title>
+  <link rel="stylesheet" href="/assets/css/main.css">
 </head>
-<body>
-  <header class="site-header">
-  <div class="logo"><a href="/">Portfolio</a></div>
-  <nav class="site-nav">
-  <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
-  <ul>
-    <li><a href="/">Home</a></li>
-    <li><a href="/projects/">Projects</a></li>
-    <li><a href="/experience/">Experience</a></li>
-    <li><a href="/tools/">Tools</a></li>
-    <li><a href="/thoughts/">Thoughts</a></li>
-  </ul>
-</nav>
-<script>
-document.querySelector(".menu-toggle").addEventListener("click", function() {
-  document.querySelector(".site-nav ul").classList.toggle("open");
-});
-</script>
+<body class="theme-system">
 
+  <header class="site-header">
+  <nav class="nav-container">
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/projects">Projects</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+  </nav>
 </header>
 
-  <section class="hero hero-top">
-  <div class="hero-text">
-    <h1>SOFTWARE ENGINEER</h1>
-    <p>Passionate about creating intuitive and engaging user experiences...</p>
-  </div>
-  <div class="hero-image">
-    <img src="/assets/images/profile.jpg" alt="Profile Picture">
-  </div>
-</section>
+  <main class="main-content">
+    <div class="profile">
+  <h2>Emile Petrinski</h2>
+  <p class="role">Mobile Engineer</p>
+  <p class="location">Remote</p>
+  <p class="contact">
+    <a href="mailto:emile@blueantcorp.com">emile@blueantcorp.com</a> |
+    <a href="tel:447766025035">447766025035</a>
+  </p>
+  <p class="links">
+    <a href="https://www.linkedin.com/in/emilep" target="_blank">LinkedIn</a> |
+    <a href="https://github.com/blueantcorp" target="_blank">GitHub</a> |
+    <a href="https://www.blueantcorp.com" target="_blank">Website</a>
+  </p>
+  <p class="bio">Experienced iOS developer with over 15 years of mobile engineering expertise. Passionate about building performant apps and intuitive user experiences.</p>
+</div>
+    
+    <section class="content-wrapper">
+      <h2 id="welcome">Welcome</h2>
+<p>This is your homepage content placeholder.</p>
 
-<main>
-  
+<h2 id="highlights">Highlights</h2>
+<p>Showcase your recent projects or key info here.</p>
 
-</main>
+    </section>
+  </main>
 
   <footer class="site-footer">
-  <p>© 2025 Portfolio. All rights reserved.</p>
+  <div class="footer-content">
+    <p>© 2025 Emile Petrinski. All rights reserved.</p>
+    <p>
+      Designed using system theme preferences, inspired by Apple Health colours.
+    </p>
+  </div>
 </footer>
 
 </body>

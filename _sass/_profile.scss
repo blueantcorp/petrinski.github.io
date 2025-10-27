@@ -1,0 +1,36 @@
+@use 'variables';
+
+/* --------------------------
+   Floating Profile Card (now below nav)
+--------------------------- */
+
+.profile {
+  background-color: var(--bg-card);
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 30px var(--shadow-light);
+  padding: 2rem;
+  max-width: 400px;
+  margin: 2rem auto 4rem auto; /* moves below nav */
+  position: relative;
+  z-index: 10;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px var(--shadow-light);
+  }
+
+  h2 {
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+  }
+
+  p {
+    color: var(--text-secondary);
+  }
+
+  .accent {
+    color: var(--accent-green);
+    font-weight: 600;
+  }
+}
