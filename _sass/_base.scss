@@ -44,7 +44,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .main-content {
-  padding-top: 6rem; // adjust this value to be slightly below the nav
+  display: flex;
+  justify-content: center; // horizontal centering
+  align-items: center;     // vertical centering
+  min-height: calc(100vh - 6rem); // subtract nav height if needed
+  padding-top: 6rem; // space for nav
 }
 
 /* Sections */
@@ -61,5 +65,52 @@ section {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* --------------------------
+   Layout Wrapper
+--------------------------- */
+.layout-wrapper {
+  display: flex;
+  gap: 4rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+/* Desktop: profile left, content right */
+.profile-column {
+  flex: 0 0 320px; // fixed width
+}
+
+.content-column {
+  flex: 1;
+}
+
+/* --------------------------
+   Mobile Responsive
+--------------------------- */
+@media (max-width: 900px) {
+  .layout-wrapper {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .profile-column {
+    width: 100%;
+    order: 2; /* default: profile at bottom on mobile (sub-pages) */
+  }
+
+  .content-column {
+    order: 1;
+  }
+
+  /* Home page: profile on top */
+  body.home-page .profile-column {
+    order: 1;
+  }
+
+  body.home-page .content-column {
+    order: 2;
   }
 }
