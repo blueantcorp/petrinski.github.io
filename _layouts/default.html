@@ -6,23 +6,19 @@
   <title>{{ site.title }}</title>
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 </head>
-<body class="theme-system {% if page.url == '/' %}home-page{% endif %}">
+<body class="theme-system">
 
-  {% include header.html %}
+  <header class="site-header" style="max-width: 960px; margin: 0 auto;">
+    {% include header.html %}
+  </header>
 
-  <main class="main-content">
-    <div class="layout-wrapper">
-      <aside class="profile-column">
-        {% include profile.html %}
-      </aside>
-
-      <section class="content-column">
-        {{ content }}
-      </section>
-    </div>
+  <main class="content-wrapper">
+    {{ content }}
   </main>
 
-  {% include footer.html %}
+  <footer class="site-footer">
+    {% include footer.html %}
+  </footer>
 
 </body>
 </html>

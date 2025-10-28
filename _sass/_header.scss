@@ -1,24 +1,25 @@
-.site-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  z-index: 1000;
-  padding: 1rem 0;
-  background: transparent;
-}
-
 .nav-container {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;  // Aligns items to the left
   align-items: center;
+  gap: 2rem;
+  padding: 0;   // Remove container padding
+  margin: 0 auto;    // Center the container horizontally
+  list-style: none;
+  max-width: 1200px;  // Match the content wrapper width
+  width: 100%;
 }
 
 .nav-links {
   display: flex;
   gap: 2rem;
   list-style: none;
+  padding: 0;   // Remove default UL padding
+  margin: 0;    // Remove default UL margin
+}
+
+.nav-links li {
+  margin: 0;
 }
 
 .nav-links a {
