@@ -1,67 +1,79 @@
 /* ============================================
-   Full Apple Health-inspired colour palette
-   Dark/Light theme system preference
+   Apple Health original theme palette
+   Dynamic RGB + alpha overlays
+   Recalculated for visual match
 ============================================ */
+
+/* Base RGB for overlays */
+:root {
+  --base-light: 255, 255, 255;   /* true white */
+  --base-dark: 28, 28, 30;       /* Apple system background dark */
+}
 
 /* --- Light Theme --- */
 :root {
-  /* Backgrounds */
-  --bg-primary: #ffffff;         // main background
-  --bg-card: #f2f2f7;            // floating card
-  --bg-section: #fafafa;         // sections
-  --bg-footer: #f4f4f6;          // footer
+  /* Backgrounds (Apple Health style) */
+  --bg-primary: rgb(var(--base-light));
+  --bg-card: rgba(var(--base-dark), 0.08);     /* Card: subtle shadowy tint */
+  --bg-section: rgba(var(--base-dark), 0.03);  /* Section: barely-there */
+  --bg-footer: rgba(var(--base-dark), 0.06);   /* Footer: slightly more than section */
 
-  /* Text */
-  --text-primary: #1c1c1e;       // main headings & text
-  --text-secondary: #3c3c4399;   // secondary / subtle
-  --text-muted: #8e8e93;         // labels, captions
+  /* Text (Apple Health style) */
+  --text-primary: rgba(var(--base-dark), 0.92);    /* Very dark, almost black */
+  --text-secondary: rgba(var(--base-dark), 0.60);  /* Faded dark */
+  --text-muted: rgba(var(--base-dark), 0.35);      /* Muted gray */
 
-  /* Lines / SVG */
-  --line-color: #d9d9d9;         // diagonal lines
-  --line-hover: #c7c7cc;         // hover effect
+  /* Lines / Dividers */
+  --line-color: rgba(var(--base-dark), 0.13);      /* Faint lines */
+  --line-hover: rgba(var(--base-dark), 0.22);      /* On hover: slightly more visible */
 
-  /* Accents */
-  --accent-green: #34c759;
-  --accent-red: #ff3b30;
-  --accent-orange: #ff9500;
-  --accent-blue: #007aff;
-  --accent-purple: #af52de;
+  /* Accents (Apple Health) */
+  --accent-green: rgb(52, 199, 89);    /* Health green */
+  --accent-red: rgb(255, 59, 48);      /* Health red */
+  --accent-orange: rgb(255, 149, 0);   /* Health orange */
+  --accent-blue: rgb(0, 122, 255);     /* Health blue */
+  --accent-purple: rgb(175, 82, 222);  /* Health purple */
 
-  /* Contact Icons */
-  --contact-normal: #0077cc;     // default icon color
-  --contact-hover: #005599;      // hover icon color
+  /* Contact Icons referencing accent-blue */
+  --contact-normal: var(--accent-blue);
+  --contact-hover: var(--accent-blue);
 
   /* UI / highlights */
-  --highlight: #ffcc00;
-  --shadow-light: rgba(0,0,0,0.08);
+  --highlight: rgb(255, 204, 0);       /* Apple yellow */
+  --shadow-light: rgba(var(--base-dark), 0.05);  /* Card shadow: very faint */
 }
 
 /* --- Dark Theme --- */
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-primary: #1c1c1e;
-    --bg-card: #2c2c2e;
-    --bg-section: #252528;
-    --bg-footer: #2a2a2c;
+    /* Backgrounds (Apple Health dark) */
+    --bg-primary: rgb(var(--base-dark));
+    --bg-card: rgba(var(--base-light), 0.10);     /* Card: subtle white overlay */
+    --bg-section: rgba(var(--base-light), 0.04);  /* Section: barely-there white */
+    --bg-footer: rgba(var(--base-light), 0.07);   /* Footer: slightly more */
 
-    --text-primary: #ffffff;
-    --text-secondary: #ebebf599;
-    --text-muted: #8e8e93;
+    /* Text (Apple Health dark) */
+    --text-primary: rgba(var(--base-light), 0.98);    /* Almost pure white */
+    --text-secondary: rgba(var(--base-light), 0.67);  /* Faded white */
+    --text-muted: rgba(var(--base-light), 0.40);      /* Muted gray */
 
-    --line-color: #3a3a3c;
-    --line-hover: #505054;
+    /* Lines / Dividers */
+    --line-color: rgba(var(--base-light), 0.13);      /* Faint white lines */
+    --line-hover: rgba(var(--base-light), 0.22);      /* On hover: slightly more visible */
 
-    --accent-green: #30d158;
-    --accent-red: #ff453a;
-    --accent-orange: #ff9f0a;
-    --accent-blue: #0a84ff;
-    --accent-purple: #bf5af2;
+    /* Accents (Apple Health dark) */
+    --accent-green: rgb(48, 209, 88);
+    --accent-red: rgb(255, 69, 58);
+    --accent-orange: rgb(255, 159, 10);
+    --accent-blue: rgb(10, 132, 255);
+    --accent-purple: rgb(191, 90, 242);
 
-    /* Contact Icons */
-    --contact-normal: #66b3ff;    // default icon color dark
-    --contact-hover: #99ccff;     // hover icon color dark
+    /* Contact Icons referencing accent-blue */
+    --contact-normal: var(--accent-blue);
+    --contact-hover: var(--accent-blue);
 
-    --highlight: #ffd60a;
-    --shadow-light: rgba(0,0,0,0.3);
+    /* UI / highlights */
+    --highlight: rgb(255, 214, 10);
+    --shadow-light: rgba(var(--base-light), 0.08);  /* Card shadow: very faint white */
   }
 }
