@@ -1,0 +1,36 @@
+.contact-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.25rem;
+  align-items: center;
+  font-family: system-ui, sans-serif;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--contact-normal);
+    transition: color 0.2s ease;
+
+    svg {
+      width: 22px;
+      height: 22px;
+      fill: currentColor;
+      transition: fill 0.2s ease;
+    }
+
+    &:hover {
+      color: var(--contact-hover);
+    }
+  }
+
+  // Mobile-only phone
+  .phone { display: none; }
+
+  @media (max-width: 768px) {
+    .phone { display: inline-flex; }
+  }
+}

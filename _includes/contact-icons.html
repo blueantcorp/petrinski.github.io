@@ -1,38 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Emile Petrinski</title>
-  <link rel="stylesheet" href="/assets/css/main.css">
-</head>
-<body class="theme-system home-page">
-
-  <header class="site-header">
-  <nav class="nav-container">
-    <ul class="nav-links">
-      <li><a href="/">Home</a></li>
-      <li><a href="/about">About</a></li>
-      <li><a href="/projects">Projects</a></li>
-      <li><a href="/contact">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-
-  <main class="main-content">
-    <div class="layout-wrapper">
-      <aside class="profile-column">
-        <div class="profile">
-  <h2>emile</h2>
-  <p class="role">Mobile Engineer</p>
-  <p class="location">Remote</p>
-  <p class="bio">Passionate about building performant apps and intuitive user experiences.</p>
-
-  <!-- Contact / Links Icons -->
-  <div class="contact-icons">
+<div class="contact-icons">
 
   <!-- Phone (mobile only) -->
-  <a href="tel:447766025035" class="phone" aria-label="Call Emile">
+  <a href="tel:{{ site.data.profile.phone }}" class="phone" aria-label="Call Emile">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.05 15.05 0 0 0
       6.6 6.6l2.2-2.2c.3-.3.8-.4 1.1-.3 1.2.4
       2.5.6 3.8.6.6 0 1 .4 1
@@ -42,20 +11,20 @@
       1 0 1.3.2 2.6.6
       3.8.1.3 0 .8-.3
       1.1l-2.2 2.2z"/></svg>
-    <!-- 447766025035 -->
+    <!-- {{ site.data.profile.phone }} -->
   </a>
 
   <!-- Email -->
-  <a href="mailto:emile@blueantcorp.com?subject=" class="email" aria-label="Email">
+  <a href="mailto:{{ site.data.profile.email }}?subject={{ site.data.profile.email_subject | uri_escape }}" class="email" aria-label="Email">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2
       2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2
       2 0 0 0-2-2zm0 4-8 5-8-5V6l8
       5 8-5v2z"/></svg>
-    <!-- emile@blueantcorp.com -->
+    <!-- {{ site.data.profile.email }} -->
   </a>
 
   <!-- WhatsApp -->
-  <a href="https://wa.me/?text=" class="whatsapp" aria-label="WhatsApp">
+  <a href="https://wa.me/{{ site.data.profile.phone_uk | remove: '+' }}?text={{ site.data.profile.whatsapp_message | uri_escape }}" class="whatsapp" aria-label="WhatsApp">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.7 14.5c-.3-.2-1.6-.8-1.9-.9-.2-.1-.4-.1-.6.1s-.7.9-.9
       1.1c-.2.2-.3.2-.6.1s-1.2-.4-2.3-1.5c-.8-.8-1.4-1.8-1.6-2.1s0-.5.1-.6c.1-.1.2-.3.3-.4.1-.1.1-.2.2-.3.1-.1.1-.2.2-.3.1-.1.1-.3
       0-.4s-.6-1.5-.8-2c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3s-.8.8-.8
@@ -67,7 +36,7 @@
   </a>
 
   <!-- LinkedIn -->
-  <a href="https://www.linkedin.com/in/emilep" target="_blank" rel="noopener" aria-label="LinkedIn">
+  <a href="https://{{ site.data.profile.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3A2 2 0 0 1
       21 5V19A2 2 0 0 1 19 21H5A2 2 0 0
       1 3 19V5A2 2 0 0 1 5
@@ -82,7 +51,7 @@
   </a>
 
   <!-- GitHub -->
-  <a href="https://www.github.com/blueantcorp" target="_blank" rel="noopener" aria-label="GitHub">
+  <a href="https://{{ site.data.profile.github }}" target="_blank" rel="noopener" aria-label="GitHub">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10
       10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.1-1.47-1.1-1.47-.9-.61.07-.6.07-.6
       1 .07 1.52 1.03 1.52 1.03.89 1.52
@@ -97,25 +66,3 @@
     <!-- GitHub -->
   </a>
 </div>
-</div>
-      </aside>
-
-      <section class="content-column">
-        <h2 id="welcome">Welcome</h2>
-<p>This is your homepage content placeholder.</p>
-
-<h2 id="highlights">Highlights</h2>
-<p>Showcase your recent projects or key info here.</p>
-
-      </section>
-    </div>
-  </main>
-
-  <footer class="site-footer">
-  <div class="footer-content">
-    <p>© 2025 Emile. All rights reserved.</p>
-  </div>
-</footer>
-
-</body>
-</html>
