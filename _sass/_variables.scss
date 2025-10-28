@@ -34,7 +34,7 @@
   --line-hover: rgba(var(--base-dark), 0.22);      /* On hover: slightly more visible */
 
   /* Contact Icons referencing accent-green */
-  --contact-normal: rgba(var(--base-accent-orange), 0.85);
+  --contact-normal: var(--text-secondary);
   --contact-hover: rgb(var(--base-accent-orange));
 
   /* UI / highlights */
