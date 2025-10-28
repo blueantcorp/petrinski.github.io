@@ -28,8 +28,11 @@
 
   /* Mobile-only phone */
   .phone { display: none; }
+  .whatsapp { display: none; }
+  
 
   @media (max-width: 768px) {
     .phone { display: inline-flex; }
+    .whatsapp { display: inline-flex; }
   }
 }

@@ -6,6 +6,7 @@
 
 /* Base Theme RGB values */
 :root {
+  /* Base colours*/
   --base-light: 255, 255, 255;   /* true white */
   --base-dark: 28, 28, 30;       /* Apple system background dark */
   --base-highlight: 255, 204, 0; /* Apple yellow base */
@@ -16,10 +17,7 @@
   --base-accent-orange: 255, 149, 0;    /* Apple orange */
   --base-accent-blue: 0, 122, 255;      /* Apple blue */
   --base-accent-purple: 175, 82, 222;   /* Apple purple */
-}
 
-/* --- Light Theme --- */
-:root {
   /* Backgrounds (Apple Health style) */
   --bg-primary: rgb(var(--base-light));
   --bg-card: rgba(var(--base-dark), 0.08);     /* Card: subtle shadowy tint */
@@ -70,8 +68,8 @@
     --accent-purple: rgba(var(--base-accent-purple), 0.80);
 
     /* Contact Icons referencing accent-green */
-    --contact-normal: rgba(var(--base-accent-green), 0.55);
-    --contact-hover: rgba(var(--base-accent-green), 0.85);
+    --contact-normal: rgba(var(--base-accent-orange), 0.55);
+    --contact-hover: var(--accent-orange);
 
     /* UI / highlights */
     --highlight: rgba(var(--base-highlight), 0.85); /* Apple yellow, slightly transparent for dark */
