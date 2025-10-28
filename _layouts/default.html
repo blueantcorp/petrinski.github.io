@@ -8,12 +8,22 @@
 </head>
 <body class="theme-system">
 
-  <header class="site-header" style="max-width: 960px; margin: 0 auto;">
+  <header class="site-header">
     {% include header.html %}
   </header>
 
-  <main class="content-wrapper">
-    {{ content }}
+  <main class="layout-wrapper">
+    <!-- Profile card -->
+    <aside class="profile-column">
+      {% include profile.html %}
+    </aside>
+
+    <!-- Main content -->
+    <section class="content-column">
+      <div class="content-wrapper">
+        {{ content }}
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
