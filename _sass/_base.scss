@@ -44,17 +44,18 @@ h1, h2, h3, h4, h5, h6 {
 .layout-wrapper {
   display: flex;
   justify-content: flex-start;
-  gap: 2rem;
+  gap: 1rem; /* reduced gap */
   max-width: 1080px;
-  margin: 5rem auto;
+  margin: 2rem auto;
   align-items: flex-start;
+  padding: 0 1.5rem;
 }
 
 /* Profile column */
 .profile-column {
   flex: 0 0 250px;
   position: sticky;
-  top: 0;
+  top: 1rem;
   align-self: flex-start;
 }
 
@@ -68,22 +69,27 @@ h1, h2, h3, h4, h5, h6 {
 /* Content wrapper */
 .content-wrapper {
   flex: 1;
-  margin-top: 1.5rem;
   max-width: 500px;
+  margin-top: 1.5rem;
 }
 
 /* Header, footer alignment */
 .site-header,
 .site-footer {
-  max-width: 900px;
-  margin: 0 auto 2rem auto;
-  padding: 0 1rem;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
-/* Footer text */
+/* Header */
+.site-header {
+  margin-top: 1rem;
+}
+
+/* Footer */
 .site-footer {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
   text-align: center;
-  padding: 1rem 0;
   color: var(--text-secondary);
 }
 
@@ -91,13 +97,14 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 900px) {
   .layout-wrapper {
     flex-direction: column;
+    gap: 0.5rem;
   }
 
   .profile-column {
     position: relative;
     width: 100%;
     order: 1;
-    margin-bottom: 1rem;
+    margin-bottom: 0.25rem;
   }
 
   .content-column {
@@ -106,13 +113,15 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .content-wrapper {
-    max-width: 100%;
+    max-width: 500px;
     margin: 0 auto;
+    margin-top: 0.25rem;
   }
 
   /* Center nav on mobile */
   .site-header nav {
     display: flex;
     justify-content: center;
+    margin: 0.5rem 0;
   }
 }
