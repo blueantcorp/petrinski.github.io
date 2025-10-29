@@ -1,0 +1,19 @@
+- category: Languages
+  items:
+    - name: Swift
+      level: 95
+    - name: Objective-C
+      level: 85
+    - name: Python
+      level: 70
+
+- category: Tools & Frameworks
+  items:
+    - name: SwiftUI
+      level: 90
+    - name: UIKit
+      level: 95
+    - name: Core Data
+      level: 80
+    - name: Combine
+      level: 75

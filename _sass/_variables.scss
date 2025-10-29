@@ -17,6 +17,9 @@
   --base-accent-orange: 255, 149, 0;    /* Apple orange */
   --base-accent-blue: 0, 122, 255;      /* Apple blue */
   --base-accent-purple: 175, 82, 222;   /* Apple purple */
+    
+  /* Selected Accent Colour */
+  --accent-color: var(--base-accent-orange);
 
   /* Backgrounds (Apple Health style) */
   --bg-primary: rgb(var(--base-light));
@@ -35,8 +38,8 @@
 
   /* Contact Icons referencing accent-green */
   --contact-normal: var(--text-secondary);
-  --contact-hover: rgb(var(--base-accent-orange));
-
+  --contact-hover: rgb(var(--accent-color));
+  
   /* UI / highlights */
   --highlight: rgb(var(--base-highlight));       /* Apple yellow */
   --shadow-light: rgba(var(--base-dark), 0.05);  /* Card shadow: very faint */
@@ -60,16 +63,9 @@
     --line-color: rgba(var(--base-light), 0.13);      /* Faint white lines */
     --line-hover: rgba(var(--base-light), 0.22);      /* On hover: slightly more visible */
 
-    /* Accents (Apple Health dark) */
-    --accent-green: rgba(var(--base-accent-green), 0.85);
-    --accent-red: rgba(var(--base-accent-red), 0.82);
-    --accent-orange: rgba(var(--base-accent-orange), 0.80);
-    --accent-blue: rgba(var(--base-accent-blue), 0.85);
-    --accent-purple: rgba(var(--base-accent-purple), 0.80);
-
     /* Contact Icons referencing accent-green */
-    --contact-normal: rgba(var(--base-accent-orange), 0.55);
-    --contact-hover: var(--accent-orange);
+    --contact-normal: rgba(var(--accent-color), 0.75);
+    --contact-hover: rgb(var(--accent-color));
 
     /* UI / highlights */
     --highlight: rgba(var(--base-highlight), 0.85); /* Apple yellow, slightly transparent for dark */

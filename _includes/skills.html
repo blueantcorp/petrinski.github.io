@@ -1,0 +1,23 @@
+<section class="skills">
+  <h2>Skills</h2>
+
+  {% for group in site.data.skills %}
+    <div class="skills-category">
+      <h3>{{ group.category }}</h3>
+
+      <div class="skills-list">
+        {% for skill in group.items %}
+          <div class="skill">
+            <div class="skill-header">
+              <span class="skill-name">{{ skill.name }}</span>
+              <span class="skill-score">{{ skill.level }}%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-bar-fill" style="--level: {{ skill.level }}%"></div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  {% endfor %}
+</section>
