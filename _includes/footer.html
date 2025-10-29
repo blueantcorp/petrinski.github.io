@@ -1,5 +1,7 @@
 <footer class="site-footer">
   <div class="footer-content">
-    <p>© {{ site.time | date: '%Y' }} {{ site.data.profile.name }}. All rights reserved.</p>
+    <p>Made with ❤️ by <a href="mailto:{{ site.data.profile.email }}?subject={{ site.data.profile.email_subject | uri_escape }}" class="email" aria-label="Email">{{ site.data.profile.name }}</a> | 
+      Powered by <a href="https://www.jekyllrb.com/" target="_blank" rel="noopener noreferrer">Jekyll</a> | 
+      Hosted on <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a></p>
   </div>
 </footer>

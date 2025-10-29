@@ -1,0 +1,27 @@
+footer,
+.site-footer {
+  a {
+     color: rgba(var(--accent-color), 0.75);
+     text-decoration: none;
+     text-decoration-color: currentColor;
+     text-decoration-thickness: 1px;
+     transition: opacity 120ms ease, text-decoration-thickness 120ms ease;
+
+     &:visited {
+        /* keep visited links using the same accent color */
+        color: rgba(var(--accent-color), 0.75);
+     }
+
+     &:hover,
+     &:focus {
+        color: rgb(var(--accent-color));
+     }
+
+     &:focus {
+        /* visible focus ring using accent color */
+        outline: 3px solid rgb(var(--accent-color));
+        outline-offset: 3px;
+        border-radius: 2px;
+     }
+  }
+}
