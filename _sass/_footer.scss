@@ -1,7 +1,7 @@
 footer,
 .site-footer {
   a {
-     color: rgba(var(--accent-color), 0.75);
+     color: var(--contact-normal);
      text-decoration: none;
      text-decoration-color: currentColor;
      text-decoration-thickness: 1px;
@@ -9,17 +9,17 @@ footer,
 
      &:visited {
         /* keep visited links using the same accent color */
-        color: rgba(var(--accent-color), 0.75);
+        color: var(--contact-hover);
      }
 
      &:hover,
      &:focus {
-        color: rgb(var(--accent-color));
+        color: var(--contact-hover);
      }
 
      &:focus {
         /* visible focus ring using accent color */
-        outline: 3px solid rgb(var(--accent-color));
+        outline: 3px solid var(--contact-hover);
         outline-offset: 3px;
         border-radius: 2px;
      }
