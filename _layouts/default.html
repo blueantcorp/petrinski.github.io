@@ -14,18 +14,24 @@
   </header>
 
   <main class="layout-wrapper">
-    <!-- Profile card -->
+  
+    <!-- Profile (left column) -->
     <aside class="profile-column">
       {% include profile.html %}
-      {% include skills.html %}
     </aside>
 
-    <!-- Main content -->
+    <!-- Main content (centre column) -->
     <section class="content-column">
       <div class="content-wrapper">
         {{ content }}
       </div>
     </section>
+
+    <!-- Skills (right column / third column) -->
+    <aside class="skills-column">
+      {% include skills.html %}
+    </aside>
+
   </main>
 
   <footer class="site-footer">
